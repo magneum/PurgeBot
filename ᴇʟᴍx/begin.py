@@ -18,11 +18,11 @@ def start(update: Update, context: CallbackContext):
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
-                send_help(update.effective_chat.id, HELP_STRINGS)
+                send_help(update.effective_chat.id, FUSE)
         else:
-            update.effective_message.reply_animation(
-                BOT_IMAGE,
-                caption=PM_START_TEXT,
+            update.effective_message.reply_photo(
+                DEL_TER,
+                caption=BRGIN,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -59,20 +59,20 @@ def help_button(update: Update, context: CallbackContext):
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
-            query.message.edit_text(HELP_STRINGS,
+            query.message.edit_text(FUSE,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(curr_page - 1, HELPABLE, "help")))
 
         elif next_match:
             next_page = int(next_match.group(1))
-            query.message.edit_text(HELP_STRINGS,
+            query.message.edit_text(FUSE,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(next_page + 1, HELPABLE, "help")))
 
         elif back_match:
-            query.message.edit_text(text=HELP_STRINGS,
+            query.message.edit_text(text=FUSE,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
         context.bot.answer_callback_query(query.id)
@@ -103,7 +103,7 @@ def get_help(update: Update, context: CallbackContext):
                + HELPABLE[module].__help__
         send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
     else:
-        send_help(chat.id, HELP_STRINGS)
+        send_help(chat.id, FUSE)
       
 __element__ = "ready"
         

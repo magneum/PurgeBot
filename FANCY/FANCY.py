@@ -1,30 +1,26 @@
-PM_START_TEXT = """
-You can find the list of available commands with /help.
-"""
-BOT_IMAGE = "https://telegra.ph/file/93612a540608640355f20.mp4"
-HELP_STRINGS = """
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-If you have any questions on how to use me, head over to @PhoenixSupport
+BRGIN = """—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—  
+Hello user i have been coded to help groups with deleting muliple messages without any hassle.
 
-*Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /donate: information about how to donate!
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
+press /help if you want to use me
 
-And the following:
-"""
+ 🦞DΣV MΣПƬIӨП:
+💻 @hypevoidsoul | @hypevoidbot  
+—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—"""
+DEL_TER = "https://telegra.ph/file/be36caba7b18b8a146390.jpg"
+FUSE = """—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—  
+Firstly add the bot in group and make it admin with `delete-messages` permission only!
+
+Bot is ready.
+use any of these commands:
+  - /purge
+  - /delete
+  - /remove
+  - /clean
+  `[as a reply to the messages you want to delete]`
+  
+ 🦞DΣV MΣПƬIӨП:
+💻 @hypevoidsoul | @hypevoidbot  
+—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—"""
 IMPORTED = {}
-MIGRATEABLE = []
 HELPABLE = {}
-STATS = []
-USER_INFO = []
-DATA_IMPORT = []
-DATA_EXPORT = []
-CHAT_SETTINGS = {}
-USER_SETTINGS = {}
 GDPR = []
