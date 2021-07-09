@@ -1,4 +1,4 @@
-import os
+from ᴋᴀᴛᴇ import *
 class Config(object):
     FEEDBACK=True
     API_ID=6372795
