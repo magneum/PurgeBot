@@ -1,8 +1,8 @@
-from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher,updater,FEEDBACK
-from ʜᴏᴍᴇᴅɪʀ import paginate_modules
+from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher,FEEDBACK
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, FEEDBACK
 from ʜᴏᴍᴇᴅɪʀ.chat_status import user_admin, can_delete
 from ᴋᴀᴛᴇ import * 
+from FANCY import *
 
 run_async
 @user_admin
@@ -25,7 +25,7 @@ def purge(update: Update, context: CallbackContext):
                     context.bot.deleteMessage(chat.id, m_id)
                 except BadRequest as err:
                     if err.message == "Message can't be deleted":
-                        context.bot.send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
+                        context.bot.send_message(chat.id, "—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻— \nCannot delete all messages. The messages may be too old, I might "
                                                   "not have delete rights, or this might not be a supergroup.")
 
                     elif err.message != "Message to delete not found":
@@ -35,13 +35,13 @@ def purge(update: Update, context: CallbackContext):
                 msg.delete()
             except BadRequest as err:
                 if err.message == "Message can't be deleted":
-                    context.bot.send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
+                    context.bot.send_message(chat.id, "—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻— \nCannot delete all messages. The messages may be too old, I might "
                                               "not have delete rights, or this might not be a supergroup.")
 
                 elif err.message != "Message to delete not found":
                     FEEDBACK.exception("Error while purging chat messages.")
 
-            context.bot.send_message(chat.id, "Purge complete.")
+            context.bot.send_photo(DEL_TER,chat.id, "—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻— \nCleaning Done.")
             return "<b>{}:</b>" \
                    "\n#PURGE" \
                    "\n<b>Admin:</b> {}" \
@@ -50,7 +50,7 @@ def purge(update: Update, context: CallbackContext):
                                                                delete_to - message_id)
 
     else:
-        msg.reply_text("Reply to a message to select where to start purging from.")
+        msg.reply_photo(DEL_TER,"—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻— \nReply to a message to select where to start cleaning from.")
     return ""
 
 
