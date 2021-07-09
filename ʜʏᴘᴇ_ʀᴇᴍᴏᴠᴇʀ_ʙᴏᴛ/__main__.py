@@ -2,8 +2,8 @@ from telegram import bot
 from Import import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, updater, FEEDBACK
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ.modules import ALL_MODULES
-from MISCL.chat_status import is_user_admin
-from MISCL.miscl import paginate_modules
+from ʜᴏᴍᴇᴅɪʀ.chat_status import is_user_admin
+from ʜᴏᴍᴇᴅɪʀ.miscl import paginate_modules
 
 PM_START_TEXT = """
 You can find the list of available commands with /help.

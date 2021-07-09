@@ -22,7 +22,7 @@ import sys
 from sys import argv
 from typing import Optional
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher,updater,FEEDBACK
-from MISCL import paginate_modules
+from ʜᴏᴍᴇᴅɪʀ import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest,ChatMigrated,NetworkError,TelegramError,TimedOut,Unauthorized
 from telegram.ext import CallbackContext,CallbackQueryHandler,CommandHandler,Filters,MessageHandler

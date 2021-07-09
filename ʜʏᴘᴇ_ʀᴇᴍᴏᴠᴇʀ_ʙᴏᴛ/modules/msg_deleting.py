@@ -1,6 +1,6 @@
 from Import import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, FEEDBACK
-from MISCL.chat_status import user_admin, can_delete
+from ʜᴏᴍᴇᴅɪʀ.chat_status import user_admin, can_delete
 
 run_async
 @user_admin
