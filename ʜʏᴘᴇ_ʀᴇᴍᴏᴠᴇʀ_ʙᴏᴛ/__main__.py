@@ -11,13 +11,11 @@ for module_name in ALL_MODULES:
     if not imported_module.__element__.lower() in IMPORTED:
         IMPORTED[imported_module.__element__.lower()] = imported_module
     else:
-        raise Exception("Can't have two modules with the same name! Please change one")
+        pass
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__element__.lower()] = imported_module
     if hasattr(imported_module, "__gdpr__"):
         GDPR.append(imported_module)
-    if hasattr(imported_module, "__import_data__"):
-        DATA_IMPORT.append(imported_module)
 
 
 
