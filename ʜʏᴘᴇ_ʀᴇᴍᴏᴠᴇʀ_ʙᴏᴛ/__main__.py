@@ -1,7 +1,5 @@
-from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, updater, FEEDBACK
+from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import updater, FEEDBACK
 from ᴇʟᴍx import ALL_MODULES
-from ʜᴏᴍᴇᴅɪʀ.chat_status import is_user_admin
-from ʜᴏᴍᴇᴅɪʀ.miscl import paginate_modules
 from ᴋᴀᴛᴇ import *
 from FANCY import *
 
@@ -22,132 +20,10 @@ for module_name in ALL_MODULES:
         DATA_IMPORT.append(imported_module)
 
 
-def send_help(chat_id, text, keyboard=None):
-    if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
-    dispatcher.bot.send_message(chat_id=chat_id,
-                                text=text,
-                                parse_mode=ParseMode.MARKDOWN,
-                                reply_markup=keyboard)
 
 
-run_async
-def start(update: Update, context: CallbackContext):
-    args = context.args
-    if update.effective_chat.type == "private":
-        if len(args) >= 1:
-            if args[0].lower() == "help":
-                send_help(update.effective_chat.id, HELP_STRINGS)
-        else:
-            update.effective_message.reply_animation(
-                BOT_IMAGE,
-                caption=PM_START_TEXT,
-                parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="Add to your group.",
-                                url="t.me/{}?startgroup=botstart".format(context.bot.username),
-                            )
-                        ]
-                    ]
-                ),
-            )
-    else:
-        update.effective_message.reply_text("Yo, why'd you summon me?")
-
-
-run_async
-def help_button(update: Update, context: CallbackContext):
-    args = context.args
-    query = update.callback_query
-    mod_match = re.match(r"help_module\((.+?)\)", query.data)
-    prev_match = re.match(r"help_prev\((.+?)\)", query.data)
-    next_match = re.match(r"help_next\((.+?)\)", query.data)
-    back_match = re.match(r"help_back", query.data)
-    try:
-        if mod_match:
-            module = mod_match.group(1)
-            text = "Here is the help for the *{}* module:\n".format(HELPABLE[module].__element__) \
-                   + HELPABLE[module].__help__
-            query.message.edit_text(text=text,
-                                     parse_mode=ParseMode.MARKDOWN,
-                                     reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
-
-        elif prev_match:
-            curr_page = int(prev_match.group(1))
-            query.message.edit_text(HELP_STRINGS,
-                                     parse_mode=ParseMode.MARKDOWN,
-                                     reply_markup=InlineKeyboardMarkup(
-                                         paginate_modules(curr_page - 1, HELPABLE, "help")))
-
-        elif next_match:
-            next_page = int(next_match.group(1))
-            query.message.edit_text(HELP_STRINGS,
-                                     parse_mode=ParseMode.MARKDOWN,
-                                     reply_markup=InlineKeyboardMarkup(
-                                         paginate_modules(next_page + 1, HELPABLE, "help")))
-
-        elif back_match:
-            query.message.edit_text(text=HELP_STRINGS,
-                                     parse_mode=ParseMode.MARKDOWN,
-                                     reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
-        context.bot.answer_callback_query(query.id)
-    except BadRequest as excp:
-        if excp.message == "Message is not modified":
-            pass
-        elif excp.message == "Query_id_invalid":
-            pass
-        elif excp.message == "Message can't be deleted":
-            pass
-        else:
-            FEEDBACK.exception("Exception in help buttons. %s", str(query.data))
-
-
-run_async
-def get_help(update: Update, context: CallbackContext):
-    args = context.args
-    chat = update.effective_chat
-    if chat.type != chat.PRIVATE:
-        update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
-                                            reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help",
-                                                                       url="t.me/{}?start=help".format(
-                                                                           context.bot.username))]]))
-        return
-
-    elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
-        module = args[1].lower()
-        text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__element__) \
-               + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
-
-    else:
-        send_help(chat.id, HELP_STRINGS)
-
-
-
-
-
-def main():
-    start_handler = CommandHandler("start", start, pass_args=True)
-    help_handler = CommandHandler("help", get_help)
-    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_")
-
-
-    dispatcher.add_handler(start_handler)
-    dispatcher.add_handler(help_handler)
-    dispatcher.add_handler(help_callback_handler)
-
-    
-    
-
-    
 FEEDBACK.info("Using long polling.")
 updater.start_polling(timeout=15, read_latency=4)
 FEEDBACK.info("Successfully loaded modules: " + str(ALL_MODULES))
-main()
 FEEDBACK.info("READY")
 updater.idle()
