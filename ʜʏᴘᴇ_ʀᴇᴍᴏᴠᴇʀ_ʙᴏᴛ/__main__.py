@@ -1,5 +1,4 @@
-from telegram import bot
-from Import import *
+from ɢᴏᴛᴄʜᴀ import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, updater, FEEDBACK
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ.modules import ALL_MODULES
 from ʜᴏᴍᴇᴅɪʀ.chat_status import is_user_admin

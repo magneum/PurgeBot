@@ -1,4 +1,4 @@
-from Import import *
+from ɢᴏᴛᴄʜᴀ import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, FEEDBACK
 from ʜᴏᴍᴇᴅɪʀ.chat_status import user_admin, can_delete
 

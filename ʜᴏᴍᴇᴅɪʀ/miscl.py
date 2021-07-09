@@ -1,7 +1,4 @@
-from time import sleep
-from typing import Dict, List
-from telegram import MAX_MESSAGE_LENGTH, Bot, InlineKeyboardButton, ParseMode
-from telegram.error import TelegramError
+from ɢᴏᴛᴄʜᴀ import *
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
