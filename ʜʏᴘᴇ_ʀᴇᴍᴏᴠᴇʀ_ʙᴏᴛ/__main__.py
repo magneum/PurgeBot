@@ -1,6 +1,6 @@
 from ɢᴏᴛᴄʜᴀ import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher, updater, FEEDBACK
-from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ.modules import ALL_MODULES
+from ᴇʟᴍx import ALL_MODULES
 from ʜᴏᴍᴇᴅɪʀ.chat_status import is_user_admin
 from ʜᴏᴍᴇᴅɪʀ.miscl import paginate_modules
 
@@ -41,7 +41,7 @@ USER_SETTINGS = {}
 GDPR = []
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ.modules." + module_name)
+    imported_module = importlib.import_module("ᴇʟᴍx." + module_name)
     if not hasattr(imported_module, "__element__"):
         imported_module.__element__ = imported_module.__name__
     if not imported_module.__element__.lower() in IMPORTED:
