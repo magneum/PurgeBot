@@ -1,0 +1,5 @@
+requests==2.20.0
+sqlalchemy
+python-telegram-bot==13.6
+loguru
+cryptg
