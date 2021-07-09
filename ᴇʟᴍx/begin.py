@@ -28,7 +28,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Add to your group.",
+                                text="Add ɦʏքɛ_քʊʀɢɛ_ɮօȶ your group.",
                                 url="t.me/{}?startgroup=botstart".format(context.bot.username),
                             )
                         ]
@@ -36,7 +36,8 @@ def start(update: Update, context: CallbackContext):
                 ),
             )
     else:
-        update.effective_message.reply_text("Yo, why'd you summon me?")
+        ok = update.effective_message.reply_photo(DEL_TER,"—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—\n\n♦️𝗡𝗼𝘁𝗲 𝗧𝗼 𝗔𝗱𝗺𝗶𝗻𝘀♦️\n𝘋𝘰𝘯'𝘵 𝘧𝘰𝘳𝘨𝘦𝘵 𝘵𝘰 𝘨𝘪𝘷𝘦 𝘮𝘦 𝘥𝘦𝘭𝘦𝘵𝘦 𝘮𝘦𝘴𝘴𝘢𝘨𝘦𝘴 𝘢𝘥𝘮𝘪𝘯 𝘳𝘪𝘨𝘩𝘵𝘴.\n\n—🧻••÷[ ɦʏքɛ_քʊʀɢɛ_ɮօȶ ]÷••🧻—")
+        ok.delete(timeout=10)
 
 
 run_async
@@ -91,11 +92,12 @@ def get_help(update: Update, context: CallbackContext):
     args = context.args
     chat = update.effective_chat
     if chat.type != chat.PRIVATE:
-        update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
+        ok = update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="Help",
                                                                        url="t.me/{}?start=help".format(
                                                                            context.bot.username))]]))
+        ok.delete(timeout=4)
         return
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
