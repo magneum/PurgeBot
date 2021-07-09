@@ -1,10 +1,10 @@
 from ᴋᴀᴛᴇ import *
 from ʜʏᴘᴇ_ʀᴇᴍᴏᴠᴇʀ_ʙᴏᴛ import dispatcher
 
+
+
 ADMIN_CACHE = TTLCache(maxsize=512, ttl=60 * 10, timer=perf_counter)
 THREAD_LOCK = RLock()
-
-
 def is_user_admin(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
     if not member:
         with THREAD_LOCK:
