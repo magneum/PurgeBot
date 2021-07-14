@@ -17,7 +17,7 @@
 ```
 
 ## 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS   
-- [![Generic badge](https://img.shields.io/badge/YouTubeMusicDownloader-Vïå_ßð†-red.svg)](https://t.me/HVYouTubeMusicBot)
+- [![Generic badge](https://img.shields.io/badge/𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺_𝗣𝘂𝗿𝗴𝗲_𝗕𝗼𝘁-Vïå_ßð†-red.svg)](https://t.me/HVYouTubeMusicBot)
 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 𝚝𝚎𝚕𝚎𝚐𝚛𝚊𝚖
 - [![Generic badge](https://img.shields.io/badge/𝙺𝚁𝚈𝙾𝙺𝙴𝚈_𝙱𝙾𝚃-Vïå_ßð†-brown.svg)](https://t.me/kryoli_bot) 
 𝘎𝘦𝘵 𝘺𝘰𝘶𝘳 𝘬𝘳𝘺𝘰-𝘬𝘦𝘺 𝘧𝘳𝘰𝘮 𝘩𝘦𝘳!
