@@ -1,4 +1,4 @@
-🍟♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪=====__Wê Ärê H¥þêVðïÐ§__=====♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪🍟
+|🔥🔥|======|ΉYPΣ_VӨID_LΛB|======|🔥🔥|
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 # 🧻⭐️『 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝘂𝗿𝗴𝗲 𝗕𝗼𝘁 』⭐️🧻
 <p align="left"><img  width="70%" height="100%" img src="https://telegra.ph/file/be36caba7b18b8a146390.jpg" /></p>
@@ -38,4 +38,4 @@
 ## 📜 LICΣПSΣ
 - 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝘂𝗿𝗴𝗲 𝗕𝗼𝘁 𝘪𝘴 𝘭𝘪𝘤𝘦𝘯𝘴𝘦𝘥 𝘶𝘯𝘥𝘦𝘳 𝘵𝘩𝘦 𝘎𝘕𝘜 𝘎𝘦𝘯𝘦𝘳𝘢𝘭 𝘗𝘶𝘣𝘭𝘪𝘤 𝘓𝘪𝘤𝘦𝘯𝘴𝘦 𝘷3.0[GNU V3.0](LICENSE)
 
-🍟♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪=====__Wê Ärê H¥þêVðïÐ§__=====♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪ｏﾟ♪ﾟ+ﾟ♪ﾟｏ♪🍟
+|🔥🔥|======|ΉYPΣ_VӨID_LΛB|======|🔥🔥|
